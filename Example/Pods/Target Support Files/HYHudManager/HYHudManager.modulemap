@@ -1,0 +1,6 @@
+framework module HYHudManager {
+  umbrella header "HYHudManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
