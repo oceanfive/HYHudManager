@@ -1,6 +1,6 @@
 {
   "name": "HYHudManager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "HUD的二次封装",
   "description": "对 MBProgressHUD 和 SVProgressHUD 的二次封装",
   "homepage": "https://github.com/oceanfive/HYHudManager",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/oceanfive/HYHudManager.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "7.0"

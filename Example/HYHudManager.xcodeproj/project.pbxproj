@@ -38,10 +38,10 @@
 
 /* Begin PBXFileReference section */
 		12D67368E62933AD8D264AFD /* Pods-HYHudManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYHudManager_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYHudManager_Example/Pods-HYHudManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1FFDE8B412A6CD93D6AFBE1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1FFDE8B412A6CD93D6AFBE1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2876A5662700C7523AB6DE13 /* Pods-HYHudManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYHudManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYHudManager_Tests/Pods-HYHudManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3779EA575E89554A8E61FBE5 /* Pods-HYHudManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYHudManager_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYHudManager_Example/Pods-HYHudManager_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5FC5344EE539735E75E22FD0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5FC5344EE539735E75E22FD0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HYHudManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYHudManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,7 +64,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96B730379E12735850788D94 /* Pods-HYHudManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYHudManager_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYHudManager_Tests/Pods-HYHudManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B99175DC8C7F5B4EE9A6CDC5 /* HYHudManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HYHudManager.podspec; path = ../HYHudManager.podspec; sourceTree = "<group>"; };
+		B99175DC8C7F5B4EE9A6CDC5 /* HYHudManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HYHudManager.podspec; path = ../HYHudManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E0210DBEBF9D5EA1F04D4C71 /* Pods_HYHudManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYHudManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F478EA59DA186E4EC62924DE /* Pods_HYHudManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYHudManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */

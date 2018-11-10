@@ -1,5 +1,5 @@
 PODS:
-  - HYHudManager (0.0.1):
+  - HYHudManager (0.0.2):
     - MBProgressHUD (~> 1.0.0)
     - SVProgressHUD (~> 2.1.0)
   - MBProgressHUD (1.0.0)
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HYHudManager: f60d18ba2aeeab2aa56c3f5b16623cd2d3ff655f
+  HYHudManager: 8cf9c4e98bc0aed8f93bd387e2594a9fd4048b44
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 

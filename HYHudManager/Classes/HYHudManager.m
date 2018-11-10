@@ -273,6 +273,7 @@ static NSArray *loadingImages;
         return;
     }
     if (loadingImages.count == 0) {
+        // mark : 传入的images 外部使用 static 修饰，不会存在多份，在内存只会存在一份
         loadingImages = images;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -290,8 +291,7 @@ static NSArray *loadingImages;
     hud.customView = mImageView;
     mImageView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [hud.bezelView addConstraint:[NSLayoutConstraint constraintWithItem:mImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:hud.bezelView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
-    [hud.bezelView addConstraint:[NSLayoutConstraint constraintWithItem:mImageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:hud.bezelView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0]];
+    // 只需要 Width 和 Height 约束即可
     [mImageView addConstraint:[NSLayoutConstraint constraintWithItem:mImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:70]];
     [mImageView addConstraint:[NSLayoutConstraint constraintWithItem:mImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:70]];
 }
