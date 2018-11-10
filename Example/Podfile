@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HYHudManager_Example' do
+  pod 'HYHudManager', :path => '../'
+
+  target 'HYHudManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
