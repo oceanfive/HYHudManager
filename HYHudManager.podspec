@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HYHudManager'
-  s.version          = '0.0.2'
+  s.version          = '0.0.4'
   s.summary          = 'HUD的二次封装'
   s.description      = <<-DESC
 对 MBProgressHUD 和 SVProgressHUD 的二次封装

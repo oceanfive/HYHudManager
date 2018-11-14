@@ -114,7 +114,7 @@ static NSArray *loadingImages;
         duration:(NSTimeInterval)duration {
 
     UIColor *textColor = [self _contentColorForStyle:style];
-     UIColor *backgroundColor = [self _contentColorForStyle:style];
+     UIColor *backgroundColor = [self _backgroundColorForStyle:style];
     
     [self _showText:text
          detailText:detailText
@@ -179,15 +179,7 @@ static NSArray *loadingImages;
     }
     hud.label.text = text;
     
-    UIColor *textColor = [self _contentColorForStyle:style];
-    if (textColor) {
-        hud.label.textColor = textColor;
-    }
-    
-    UIColor *backgroundColor = [self _backgroundColorForStyle:style];
-    if (backgroundColor) {
-        hud.bezelView.backgroundColor = backgroundColor;
-    }
+    [self _handleHUDColor:hud style:style];
     
     [hud hideAnimated:YES afterDelay:HYHudDefaultDuration];
 }
