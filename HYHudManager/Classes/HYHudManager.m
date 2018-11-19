@@ -12,7 +12,7 @@
 
 static const NSTimeInterval HYHudDefaultDuration = 3.0f;
 static NSInteger HYHudDefaultStyle = HYHudStyleLight;
-static NSArray *loadingImages;
+static NSArray *HYLoadingImages;
 
 @implementation HYHudManager
 
@@ -114,7 +114,7 @@ static NSArray *loadingImages;
         duration:(NSTimeInterval)duration {
 
     UIColor *textColor = [self _contentColorForStyle:style];
-     UIColor *backgroundColor = [self _backgroundColorForStyle:style];
+    UIColor *backgroundColor = [self _backgroundColorForStyle:style];
     
     [self _showText:text
          detailText:detailText
@@ -148,6 +148,10 @@ static NSArray *loadingImages;
     if (!mView) {
         mView = [self _sharedView];
     }
+    if (!mView) {
+        return;
+    }
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:mView animated:YES];
     hud.mode = MBProgressHUDModeText;
     hud.label.text = text;
@@ -157,7 +161,7 @@ static NSArray *loadingImages;
         hud.bezelView.backgroundColor = backgroundColor;
     }
     hud.offset = CGPointMake(0, verticalOffset);
-    hud.margin = 10;
+    hud.userInteractionEnabled = NO; // 不会影响用户的操作
     [hud hideAnimated:YES afterDelay:duration];
 }
 
@@ -178,9 +182,8 @@ static NSArray *loadingImages;
         hud.customView = [[UIImageView alloc] initWithImage:image];
     }
     hud.label.text = text;
-    
     [self _handleHUDColor:hud style:style];
-    
+    hud.userInteractionEnabled = NO; // 不会影响用户的操作
     [hud hideAnimated:YES afterDelay:HYHudDefaultDuration];
 }
 
@@ -264,9 +267,9 @@ static NSArray *loadingImages;
     if (!view || images.count <= 0) {
         return;
     }
-    if (loadingImages.count == 0) {
+    if (HYLoadingImages.count == 0) {
         // mark : 传入的images 外部使用 static 修饰，不会存在多份，在内存只会存在一份
-        loadingImages = images;
+        HYLoadingImages = images;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeCustomView;
@@ -276,7 +279,7 @@ static NSArray *loadingImages;
     UIImageView *mImageView = [[UIImageView alloc] init];
     mImageView.backgroundColor = [UIColor clearColor];
     mImageView.contentMode = UIViewContentModeScaleAspectFit;
-    [mImageView setAnimationImages:loadingImages];
+    [mImageView setAnimationImages:HYLoadingImages];
     mImageView.animationDuration = 1;
     mImageView.animationRepeatCount = 0;
     [mImageView startAnimating];
@@ -295,15 +298,19 @@ static NSArray *loadingImages;
                   style:(HYHudStyle)style {
     if (!hud) return;
     
+    UIColor *backgroundColor = [self _backgroundColorForStyle:style];
+    if (backgroundColor) {
+        hud.bezelView.backgroundColor = backgroundColor;
+    }
+    if (style == HYHudStyleClear) {
+        hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+        hud.bezelView.color = [UIColor clearColor];
+    }
+    
     UIColor *textColor = [self _contentColorForStyle:style];
     if (textColor) {
         hud.label.textColor = textColor;
         hud.detailsLabel.textColor = textColor;
-    }
-    
-    UIColor *backgroundColor = [self _backgroundColorForStyle:style];
-    if (backgroundColor) {
-        hud.bezelView.backgroundColor = backgroundColor;
     }
 }
 
@@ -318,7 +325,7 @@ static NSArray *loadingImages;
             
         case HYHudStyleDark:
         {
-            backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+            backgroundColor = [UIColor blackColor];
         }
             break;
             
